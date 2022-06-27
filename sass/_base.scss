@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #222;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+.span-highglight-large {
+  font-size: 3rem;
+}
+
+.heading-primary {
+  font-size: 5rem;
+  text-align: center;
+  margin: 5rem;
+}
+
+.heading-secondary {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.skill-img {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 0.5rem;
+}
+
+// For scrolling
+#about {
+  scroll-margin-top: 8rem;
+}
+
+#projects {
+  scroll-margin-top: 2rem;
+}

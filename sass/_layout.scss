@@ -1,0 +1,253 @@
+.section-hero {
+  color: #fff;
+  background-color: #06283d;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  &__heading {
+    font-size: 4.6rem;
+    margin: -2rem 0 2rem;
+  }
+
+  &__text {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+
+  &__social-icons {
+    a {
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+    }
+
+    img {
+      transition: all 0.3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.section-about {
+  margin: 8rem 0;
+  font-size: 1.6rem;
+
+  .icon {
+    @include respond(phone) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 8rem;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+
+    .info-content {
+      width: 50%;
+
+      @include respond(phone) {
+        width: 90%;
+      }
+
+      &__text p {
+        font-size: 1.8rem;
+
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  &__skills {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+
+    .skills-content {
+      width: 50%;
+
+      @include respond(phone) {
+        width: 90%;
+      }
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      &__item {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        margin-bottom: 2rem;
+
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.section-projects {
+  margin: 8rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .project-link {
+    margin-top: 5rem;
+    color: #06283d;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2.2rem;
+
+    &__arrow {
+      transition: all 0.3s;
+    }
+
+    &:hover .project-link__arrow {
+      margin-left: 1.5rem;
+    }
+  }
+}
+
+.projects-container {
+  display: flex;
+  justify-content: space-around;
+
+  @include respond(tab-land) {
+    flex-wrap: wrap;
+  }
+
+  @include respond(phone) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.section-contact__info {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+
+  @include respond(phone) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  &-links {
+    margin-right: 3rem;
+  }
+
+  &-img {
+    &-chat {
+      height: 25rem;
+      width: 25rem;
+      @include respond(phone) {
+        height: 15rem;
+        width: 15rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-social {
+    margin-top: 2rem;
+
+    img {
+      transition: all 0.3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .form {
+    &-input {
+      font-family: inherit;
+      display: block;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      width: 100%;
+    }
+
+    &-btn {
+      border: none;
+      font-family: inherit;
+      font-size: 1.6rem;
+      margin-top: 1rem;
+      padding: 0.5rem 2rem;
+      border-radius: 3px;
+      background-color: #638dff;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+        color: #f6bd60;
+        box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: #06283d;
+  &-flex {
+    padding: 5rem;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+  }
+
+  a,
+  a:visited {
+    text-decoration: none;
+    color: #638dff;
+  }
+
+  &-title {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  &__credits {
+    display: flex;
+    flex-direction: column;
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+}

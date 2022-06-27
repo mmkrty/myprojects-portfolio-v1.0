@@ -1,0 +1,155 @@
+////////////////////////
+/* navbar */
+.nav {
+  position: fixed;
+  background-color: #222;
+  // background-color: #638dff;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 100;
+
+  &__logo a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-link {
+      font-size: 1.6rem;
+      text-decoration: none;
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  /* active */
+  &.active {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+
+    & .container {
+      padding: 1rem 0;
+    }
+
+    & a {
+      color: #000;
+    }
+  }
+}
+
+/* current */
+.nav a.current,
+.nav a:hover,
+.nav a.active {
+  color: #f6bd60;
+  font-weight: bold;
+}
+
+////////////////////////
+/* icon */
+.icon {
+  max-width: 40%;
+}
+
+////////////////////////
+/* card */
+.card {
+  box-shadow: 0 0.2rem 10rem rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 25%;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  @include respond(tab-land) {
+    max-width: 30%;
+  }
+
+  @include respond(tab-port) {
+    max-width: 45%;
+    margin-top: 2rem;
+  }
+
+  @include respond(phone) {
+    max-width: 90%;
+  }
+
+  &:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.2);
+  }
+
+  &-header {
+    height: 20rem;
+
+    &__img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &-content {
+    background-color: #fff;
+    padding: 3rem;
+
+    &__title {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &__text {
+      color: #777;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+
+    &__link {
+      text-decoration: none;
+      display: inline-block;
+      color: #fff;
+      border-radius: 3px;
+      padding: 0.5rem 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 1px;
+      transition: all 0.3s;
+
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+
+      &.rep {
+        background-color: #231942;
+      }
+
+      &.live {
+        background-color: #52b69a;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+        color: #f6bd60;
+      }
+    }
+  }
+}
