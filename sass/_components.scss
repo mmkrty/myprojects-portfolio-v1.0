@@ -86,7 +86,7 @@
 
   @include respond(tab-port) {
     max-width: 45%;
-    margin-top: 2rem;
+    margin: 2rem 0;
   }
 
   @include respond(phone) {
