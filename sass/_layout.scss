@@ -116,6 +116,10 @@
   flex-direction: column;
   align-items: center;
 
+  @include respond(phone-s) {
+    margin: 4rem 0;
+  }
+
   .project-link {
     margin-top: 5rem;
     color: #06283d;
@@ -228,6 +232,21 @@
     display: flex;
     justify-content: space-around;
     color: #fff;
+
+    @include respond(phone) {
+      padding: 1rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__social-icons {
+    img {
+      @include respond(phone-s) {
+        height: 24px;
+        width: 24px;
+      }
+    }
   }
 
   a,

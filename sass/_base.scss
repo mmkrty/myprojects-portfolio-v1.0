@@ -9,6 +9,10 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+
+  @include respond(phone-s) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -30,6 +34,10 @@ body {
   font-size: 5rem;
   text-align: center;
   margin: 5rem;
+
+  @include respond(phone-s) {
+    margin: 1.5rem 0;
+  }
 }
 
 .heading-secondary {
@@ -49,5 +57,9 @@ body {
 }
 
 #projects {
+  scroll-margin-top: 2rem;
+}
+
+#contact {
   scroll-margin-top: 2rem;
 }

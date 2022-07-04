@@ -16,6 +16,10 @@
     color: #fff;
     padding: 0.7rem 1.5rem;
     transition: all 0.3s ease-in-out;
+
+    @include respond(phone-s) {
+      display: none;
+    }
   }
 
   &__container {
