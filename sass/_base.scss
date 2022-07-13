@@ -9,10 +9,6 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-
-  @include respond(phone-s) {
-    font-size: 50%;
-  }
 }
 
 body {
