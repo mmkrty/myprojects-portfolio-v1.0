@@ -140,6 +140,7 @@
 .projects-container {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 
   @include respond(tab-land) {
     flex-wrap: wrap;

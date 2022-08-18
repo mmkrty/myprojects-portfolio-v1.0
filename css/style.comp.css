@@ -15,7 +15,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
 1em = 16px
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -200,6 +202,7 @@ body {
 .projects-container {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 @media only screen and (max-width: 75em) {
   .projects-container {
@@ -322,7 +325,7 @@ body {
 /* navbar */
 .nav {
   position: fixed;
-  background-color: #222;
+  background-color: #638dff;
   top: 0;
   left: 0;
   right: 0;
@@ -431,11 +434,12 @@ body {
 
 /* card */
 .card {
-  box-shadow: 0 0.2rem 10rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.2rem 8rem rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   overflow: hidden;
-  max-width: 25%;
+  max-width: 30%;
   transition: all 0.3s;
+  margin-top: 4rem;
   cursor: pointer;
 }
 @media only screen and (max-width: 75em) {
@@ -471,7 +475,7 @@ body {
   padding: 3rem;
 }
 .card-content__title {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-bottom: 0.5rem;
 }
 .card-content__text {
